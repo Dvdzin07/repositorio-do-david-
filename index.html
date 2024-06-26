@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
+    <title>Escolha</title>
     <style>
         body {
             background-color: #000;
@@ -12,35 +12,50 @@
             text-align: center;
             padding: 20px;
         }
-        button {
+        .opcao {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
             background-color: #fff;
             color: #000;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
+            font-size: 24px;
+            line-height: 150px;
             cursor: pointer;
+            margin: 10px;
+            border: 2px solid transparent;
         }
-        button:hover {
+        .opcao:hover {
             background-color: #ccc;
+        }
+        .opcao.selecionado {
+            background-color: #f00;
+            color: #fff;
+            border-color: #000;
         }
     </style>
 </head>
 <body>
-    <h1>Bem-vindo ao meu site!</h1>
-    <p>Este é um site hospedado no GitHub Pages.</p>
+    <h1>Escolha uma opção:</h1>
     
-    <button id="resposta-btn">vai me dar hj?</button>
+    <div id="sim" class="opcao">Sim</div>
+    <div id="nao" class="opcao">Não</div>
 
     <script>
-        document.getElementById('resposta-btn').addEventListener('click', function() {
-            var resposta = confirm("Vai me dar hoje?");
-            if (resposta) {
-                window.location.href = "https://youtu.be/Z6-y_8pwgFY?si=Qc2SA_KQFvoQPbkN";
-            } else {
-                // Aqui você pode adicionar o código para lidar com o "não", se necessário
-                // Exemplo: desabilitar o botão ou mostrar uma mensagem
-                alert("Que pena! :(");
-            }
+        var opcaoSim = document.getElementById('sim');
+        var opcaoNao = document.getElementById('nao');
+
+        opcaoSim.addEventListener('click', function() {
+            window.location.href = "https://youtu.be/Z6-y_8pwgFY?si=Qc2SA_KQFvoQPbkN";
+        });
+
+        opcaoNao.addEventListener('click', function() {
+            opcaoNao.classList.add('selecionado');
+            alert("Que pena! :(");
+        });
+    </script>
+</body>
+</html>
+
         });
     </script>
 </body>
