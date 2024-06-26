@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
+    <title>Seu Título Aqui</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ccc;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bem-vindo ao meu site!</h1>
-    <p>Este é um site hospedado no GitHub Pages.</p>
+    <h1>Seu Título Aqui</h1>
+    <p>Texto do seu site aqui.</p>
+    
+    <button id="resposta-btn">vai me dar hj?</button>
+
+    <script>
+        document.getElementById('resposta-btn').addEventListener('click', function() {
+            var resposta = confirm("Vai me dar hoje?");
+            if (resposta) {
+                window.location.href = "https://youtu.be/Z6-y_8pwgFY?si=Qc2SA_KQFvoQPbkN";
+            } else {
+                // Aqui você pode adicionar o código para lidar com o "não", se necessário
+                // Exemplo: desabilitar o botão ou mostrar uma mensagem
+                alert("Que pena! :(");
+            }
+        });
+    </script>
 </body>
 </html>
