@@ -13,7 +13,7 @@
             padding: 20px;
         }
         .opcao {
-            display: inline-block;
+            position: absolute;
             width: 150px;
             height: 150px;
             background-color: #fff;
@@ -21,16 +21,10 @@
             font-size: 24px;
             line-height: 150px;
             cursor: pointer;
-            margin: 10px;
             border: 2px solid transparent;
         }
         .opcao:hover {
             background-color: #ccc;
-        }
-        .opcao.selecionado {
-            background-color: #f00;
-            color: #fff;
-            border-color: #000;
         }
     </style>
 </head>
@@ -38,7 +32,7 @@
     <h1>Escolha uma opção:</h1>
     
     <div id="sim" class="opcao">Sim</div>
-    <div id="nao" class="opcao">Não</div>
+    <div id="nao" class="opcao nao">Não</div>
 
     <script>
         var opcaoSim = document.getElementById('sim');
@@ -49,9 +43,18 @@
         });
 
         opcaoNao.addEventListener('click', function() {
-            opcaoNao.classList.add('selecionado');
-            alert("Que pena! :(");
+            // Muda a posição do botão Não aleatoriamente
+            var width = window.innerWidth - 150; // Largura máxima da janela
+            var height = window.innerHeight - 150; // Altura máxima da janela
+            var newX = Math.floor(Math.random() * width); // Nova posição X
+            var newY = Math.floor(Math.random() * height); // Nova posição Y
+            opcaoNao.style.left = newX + 'px';
+            opcaoNao.style.top = newY + 'px';
         });
+    </script>
+</body>
+</html>
+
     </script>
 </body>
 </html>
