@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escolha</title>
+    <title>Vai me dar hj?</title>
     <style>
         body {
             background-color: #000;
@@ -29,18 +29,13 @@
     </style>
 </head>
 <body>
-    <h1>Escolha uma opção:</h1>
+    <h1>Vai me dar hj?</h1>
     
-    <div id="sim" class="opcao">Sim</div>
+    <a id="sim" class="opcao" href="https://youtu.be/AlnHNi0hdO0?si=Dj5gk8Ighf0lVqv2" target="_blank">Sim</a>
     <div id="nao" class="opcao nao">Não</div>
 
     <script>
-        var opcaoSim = document.getElementById('sim');
         var opcaoNao = document.getElementById('nao');
-
-        opcaoSim.addEventListener('click', function() {
-            window.location.href = "https://youtu.be/Z6-y_8pwgFY?si=Qc2SA_KQFvoQPbkN";
-        });
 
         opcaoNao.addEventListener('click', function() {
             // Muda a posição do botão Não aleatoriamente
@@ -51,10 +46,6 @@
             opcaoNao.style.left = newX + 'px';
             opcaoNao.style.top = newY + 'px';
         });
-    </script>
-</body>
-</html>
-
     </script>
 </body>
 </html>
